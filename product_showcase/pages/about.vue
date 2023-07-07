@@ -11,10 +11,17 @@
       dignissimos commodi quam reprehenderit doloremque ex eveniet consectetur
       aspernatur dolorum quis!
     </p>
+    <p>{{ data }}</p>
   </div>
 </template>
 
 <script setup>
+const { data } = await useFetch("/api/text?name=shuvo", {
+  method: "post",
+  body: {
+    age: 30,
+  },
+});
 </script>
 
 <style scoped>
