@@ -14,6 +14,11 @@ definePageMeta({
 });
 
 const { data: products } = await useFetch("https://fakestoreapi.com/products");
+
+// ? this is one way can add multiple page head title or meta and many more
+// useHead({
+//   title: "Product Showcase | Products",
+// });
 </script>
 
 <style>
