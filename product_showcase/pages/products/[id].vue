@@ -13,6 +13,14 @@ const { data: product } = await useFetch(uri);
 // ? to refetch if it not fetch each time
 // const { data: product } = await useFetch(uri, { key: id });
 
+if (!product.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Product not found",
+    fatal: true,
+  });
+}
+
 definePageMeta({
   layout: "products",
 });
